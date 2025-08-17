@@ -30,10 +30,11 @@ function Layout() {
 
   return (
     <>
-        <ToastContainer />
+        
         
         {/*Hide Headder*/}
         {!hideHeaderRoutes.includes(location.pathname) && <Header />}
+        <ToastContainer />
         <Routes>
           
           <Route path ='/auth' element ={isAuth ? <Navigate to='/' />: <Auth />}/>
