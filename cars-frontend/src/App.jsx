@@ -36,10 +36,9 @@ function Layout() {
         {!hideHeaderRoutes.includes(location.pathname) && <Header />}
         <ToastContainer />
         <Routes>
-          
-          <Route path ='/auth' element ={isAuth ? <Navigate to='/' />: <Auth />}/>
 
-          <Route path ='/' element ={<ProtectedRoutes><Home /></ProtectedRoutes>}/>
+           <Route path ='/' element ={<ProtectedRoutes><Home /></ProtectedRoutes>}/>
+          <Route path ='/auth' element ={isAuth ? <Navigate to='/' />: <Auth />}/>
           <Route path ='/orders' element ={<ProtectedRoutes><Orders /></ProtectedRoutes>}/>
           <Route path ='/cars' element ={<ProtectedRoutes><Cars /></ProtectedRoutes>}/>
 
